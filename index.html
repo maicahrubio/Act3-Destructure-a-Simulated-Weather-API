@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Destructuring</title>
+</head>
+<body>
+  <h1>Check the Console</h1>
+  <script>
+    // Simulated Weather API Data
+    const fakeData = {
+      location: { name: "Manila" },
+      current: {
+        temp_c: 30,
+        condition: {
+          text: "Partly Cloudy",
+        },
+      },
+    };
+
+    // Use destructuring to extract values
+    const {
+      location: { name },
+      current: {
+        temp_c,
+        condition: { text },
+      },
+    } = fakeData;
+
+    // Display weather information in console
+    console.log(`Weather in ${name}: ${temp_c}°C and ${text}`);
+  </script>
+</body>
+</html>
